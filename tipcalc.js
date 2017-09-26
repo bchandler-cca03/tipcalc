@@ -3,6 +3,9 @@
 
 var checkAmt = document.getElementById("checkAmt");
 var tipPct   = document.getElementById("tipPct");
+var tipTotal = document.getElementById("tipTotal");
+var checkTotal = document.getElementById("checkTotal");
+var totalTotal = document.getElementById("totalTotal");
 // var total    = document.getElementById("total");  // not sure if I need this here
 
 calcBtn.addEventListener("click", function(){
@@ -20,6 +23,9 @@ calcBtn.addEventListener("click", function(){
     }
 
     var total = Number(checkAmt.value) + tipAmt;
+    checkTotal.innerText = Number(checkAmt.value);
+    tipTotal.innerText = tipAmt;
+    totalTotal.innerText = total;
     totalArea.innerText = total;
 });    
 
